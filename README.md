@@ -4,11 +4,11 @@ A minimalist Chrome extension for seamless note-taking tied to specific websites
 
 ## Features
 
-📄 Take quick notes for any website.
-🔄 Automatically display saved notes when revisiting.
-💾 Notes are saved locally or synced across devices.
-🖋️ Clean and distraction-free interface.
-Stay productive and never lose track of your ideas! 🚀
+📄 Take quick notes for any website.<br> 
+🔄 Automatically display saved notes when revisiting.<br> 
+💾 Notes are saved locally or synced across devices.<br> 
+🖋️ Clean and distraction-free interface.<br> 
+Stay productive and never lose track of your ideas! 🚀<br> 
 
 ## Credit
 
