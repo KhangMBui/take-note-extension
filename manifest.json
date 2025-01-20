@@ -12,5 +12,8 @@
       "matches": ["<all_urls>"],
       "js": ["./src/content.js"]
     }
-  ]
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://cdn.tiny.cloud; style-src 'self' 'unsafe-inline';"
+  }
 }
