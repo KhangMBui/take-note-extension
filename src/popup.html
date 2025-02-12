@@ -1,8 +1,57 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Take Note</h1>
-    <textarea placeholder="Write your note here..." id="note"></textarea>
-    <button id="saveNote">Save Note</button>
-    <script src="./popup.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>Take Notey</h1>
+    <div class="header-controls">
+      <button id="themeToggle" class="theme-toggle">🌓</button>
+      <button id="newNote" class="btn-icon" title="New Note (Ctrl+N)">+</button>
+    </div>
+  </header>
+  
+  <div class="notes-sidebar">
+    <div class="sidebar-header">
+      <button id="newNote" class="btn-primary">+ New Note</button>
+      <input type="text" id="search" placeholder="Search notes..." class="search-input">
+    </div>
+    
+    <div id="notesList" class="notes-list"></div>
+    
+    <div class="sidebar-footer">
+      <button id="exportNotes" class="btn-secondary">Export All</button>
+      <label for="importFile" class="btn-secondary">Import</label>
+      <input type="file" id="importFile" accept=".json" hidden>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="toolbar">
+      <button data-command="bold" class="format-btn" title="Bold (Ctrl+B)">B</button>
+      <button data-command="italic" class="format-btn" title="Italic (Ctrl+I)">I</button>
+      <button data-command="underline" class="format-btn" title="Underline (Ctrl+U)">U</button>
+      <select id="colorPicker" class="color-picker">
+        <option value="">Text Color</option>
+        <option value="gray">🟤 </option>
+        <option value="red">🔴 </option>
+        <option value="green">🟢 </option>
+        <option value="blue">🔵 </option>
+        <option value="white">⚪ </option>
+      </select>
+      <input type="text" id="noteTitle" placeholder="Note title" class="note-title">
+    </div>
+
+    <div id="editor" contenteditable="true" class="editor"></div>
+    
+    <div class="status-bar">
+      <span id="charCount">0 characters</span>
+      <span id="lastSaved"></span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
 </html>

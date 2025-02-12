@@ -1,0 +1,190 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --primary-color: #4CAF50;
+  --secondary-color: #2196F3;
+  --hover-bg: rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] {
+  --bg-color: #2d2d2d;
+  --text-color: #ffffff;
+  --border-color: #555555;
+  --hover-bg: rgba(255,255,255,0.1);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  width: 800px;
+  height: 500px;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+}
+
+.notes-sidebar {
+  width: 200px;
+  border-right: 1px solid var(--border-color);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toolbar styles */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.format-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.format-btn:hover {
+  background: var(--hover-bg);
+}
+
+.format-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.color-picker {
+  padding: 5px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Editor styles */
+.editor {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  overflow-y: auto;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+
+.editor:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+/* Notes list styles */
+.notes-list {
+  flex: 1;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+
+.note-item {
+  padding: 8px;
+  margin: 4px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+.note-item:hover {
+  background: var(--hover-bg);
+}
+
+.note-item.active {
+  border-color: var(--primary-color);
+  background: rgba(76, 175, 80, 0.1);
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Status bar */
+.status-bar {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+
+[data-theme="dark"] .status-bar {
+  color: #aaa;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.note-title {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Add to popup.css */
+.theme-toggle {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.color-picker option {
+  align-self: center;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+/* Ensure emoji display */
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.theme-icon {
+  vertical-align: middle;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
